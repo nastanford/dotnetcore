@@ -2,7 +2,7 @@
   "version": "1.0.0-*",
 
   "dependencies": {
-    "AWSSDK.DynamoDBv2": "3.3.0.3",
+    "AWSSDK.DynamoDBv2": "3.3.2.1",
     "NETStandard.Library": "1.6.1"
   },
 
