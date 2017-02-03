@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Services
 {
     public interface IPassengerService
     {
-        IEnumerable<Passenger> GetPassengers();
+        Task<IEnumerable<Passenger>> GetPassengers();
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using Amazon.DynamoDBv2;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,7 +34,12 @@ namespace WebApi
         {
             // Add framework services.
             services.AddApplicationInsightsTelemetry(Configuration);
+            //App
             services.AddTransient<IPassengerService, PassengerService>();
+            //AWS
+            services.AddDefaultAWSOptions(Configuration.GetAWSOptions());
+            services.AddAWSService<IAmazonDynamoDB>();
+            //MVC
             services.AddMvc();
         }
 

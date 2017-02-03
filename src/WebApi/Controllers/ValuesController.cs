@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Services;
 
@@ -16,9 +17,9 @@ namespace WebApi.Controllers
 
         // GET api/values
         [HttpGet]
-        public IEnumerable<Passenger> Get()
+        public async Task<IEnumerable<Passenger>> Get()
         {
-            return _passengerService.GetPassengers();
+            return await _passengerService.GetPassengers();
         }
 
         // GET api/values/5
