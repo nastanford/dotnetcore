@@ -18,7 +18,8 @@
     "Microsoft.Extensions.Logging.Debug": "1.1.0",
     "Microsoft.Extensions.Options.ConfigurationExtensions": "1.1.0",
     "AWSSDK.Extensions.NETCore.Setup": "3.3.0.2",
-    "AWSSDK.DynamoDBv2": "3.3.2.1"
+    "AWSSDK.DynamoDBv2": "3.3.2.1",
+    "Microsoft.AspNetCore.StaticFiles": "1.1.0"
   },
 
   "tools": {

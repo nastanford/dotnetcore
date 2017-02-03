@@ -52,7 +52,7 @@ namespace WebApi
             app.UseApplicationInsightsRequestTelemetry();
 
             app.UseApplicationInsightsExceptionTelemetry();
-
+            app.UseStaticFiles();
             app.UseMvc();
         }
     }
