@@ -18,7 +18,7 @@ namespace Services
 
         public async Task<IEnumerable<Passenger>> GetPassengers()
         {
-            return _db.QueryAsync(new QueryRequest()
+            return await _db.QueryAsync(new QueryRequest()
             {
                 TableName = "dotnetcore",
                 KeyConditionExpression = "Id = :v_Id",
@@ -30,8 +30,7 @@ namespace Services
                 .ContinueWith(
                     task =>
                         task.Result.Items.Select(
-                            row => new Passenger {Name = row["FirstName"].S, Surname = row["LastName"].S}))
-                .Result;
+                            row => new Passenger {Name = row["FirstName"].S, Surname = row["LastName"].S}));
         }
     }
 }
